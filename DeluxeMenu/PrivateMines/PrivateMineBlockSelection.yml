@@ -1,0 +1,1877 @@
+menu_title: '&1&lMINE BLOCKS' #14 one page | 34 blocks
+size: 36
+items:
+  'Back':
+    material: BARRIER
+    slot: 31
+    priority: 1
+    display_name: '&c&lBACK'
+    lore:
+      - '&7&o(( Click here to go ))'
+    click_commands:
+      - '[openguimenu] PrivateMine'
+  #
+  # COBBLESTONE
+  #
+  'COBBLESTONE-CURRENT':
+    material: COBBLESTONE
+    slot: 0
+    priority: 1
+    enchantments:
+      - DURABILITY;1
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.COBBLESTONE.current
+    display_name: '&l&6COBBLESTONE &7(Current)'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 1'
+      - ''
+      - '&7Base Value: &a$1'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'COBBLESTONE-UNLOCKED':
+    material: COBBLESTONE
+    slot: 0
+    priority: 2
+    view_requirement:
+      requirements:
+        has_size:
+          type: javascript
+          expression: '%edprison_rankup_level% >= 1'
+    display_name: '&l&6COBBLESTONE'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 1'
+      - ''
+  #
+  #   STONE
+  #
+  'STONE-CURRENT':
+    material: STONE
+    slot: 1
+    priority: 1
+    enchantments:
+      - DURABILITY;1
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.STONE.current
+    display_name: '&l&6STONE &7(Current)'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 5'
+      - ''
+      - '&7Base Value: &a$5'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'STONE-UNLOCKED-PERMS':
+    material: STONE
+    slot: 1
+    priority: 2
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.STONE
+    display_name: '&l&6STONE'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 5'
+      - ''
+      - '&7Base Value: &a$5'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'STONE-UNLOCKED':
+    material: STONE
+    slot: 1
+    priority: 3
+    view_requirement:
+      requirements:
+        has_size:
+          type: javascript
+          expression: '%edprison_rankup_level% >= 1'
+    display_name: '&l&6STONE'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 1'
+      - ''
+      - '&7Base Value: &a$5'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+    left_click_commands:
+      - '[console] pmine setblocks %player_name% STONE'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.STONE'
+      - '[console] lp user %player_name% permission set privatemines.blocks.STONE.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.COBBLESTONE.current'
+      - '[close]'
+    right_click_commands:
+      - '[console] pmine setblocks %player_name% STONE'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.STONE'
+      - '[console] lp user %player_name% permission set privatemines.blocks.STONE.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.COBBLESTONE.current'
+      - '[close]'
+  'STONE-LOCKED':
+    material: STONE
+    slot: 1
+    priority: 4
+    display_name: '&l&6STONE'
+    lore:
+      - ''
+      - '&c&lREQUIRED LEVEL: 5'
+      - ''
+      - '&7Base Value: &a$5'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  #
+  #   SANDSTONE
+  #
+  'SANDSTONE-CURRENT':
+    material: SANDSTONE
+    slot: 2
+    priority: 1
+    enchantments:
+      - DURABILITY;1
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.SANDSTONE.current
+    display_name: '&l&6SANDSTONE &7(Current)'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 9'
+      - ''
+      - '&7Base Value: &a$9'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'SANDSTONE-UNLOCKED-PERMS':
+    material: SANDSTONE
+    slot: 2
+    priority: 2
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.SANDSTONE
+    display_name: '&l&6SANDSTONE'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 9'
+      - ''
+      - '&7Base Value: &a$9'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'SANDSTONE-UNLOCKED':
+    material: SANDSTONE
+    slot: 2
+    priority: 3
+    view_requirement:
+      requirements:
+        has_size:
+          type: javascript
+          expression: '%edprison_rankup_level% >= 9'
+    display_name: '&l&6SANDSTONE'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 9'
+      - ''
+      - '&7Base Value: &a$9'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+    left_click_commands:
+      - '[console] pmine setblocks %player_name% SANDSTONE'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.SANDSTONE'
+      - '[console] lp user %player_name% permission set privatemines.blocks.SANDSTONE.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.STONE.current'
+      - '[close]'
+    right_click_commands:
+      - '[console] pmine setblocks %player_name% SANDSTONE'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.SANDSTONE'
+      - '[console] lp user %player_name% permission set privatemines.blocks.SANDSTONE.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.STONE.current'
+      - '[close]'
+  'SANDSTONE-LOCKED':
+    material: SANDSTONE
+    slot: 2
+    priority: 4
+    display_name: '&l&6SANDSTONE'
+    lore:
+      - ''
+      - '&c&lREQUIRED LEVEL: 9'
+      - ''
+      - '&7Base Value: &a$9'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  #
+  #   RED_SANDSTONE
+  #
+  'RED_SANDSTONE-CURRENT':
+    material: RED_SANDSTONE
+    slot: 3
+    priority: 1
+    enchantments:
+      - DURABILITY;1
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.RED_SANDSTONE.current
+    display_name: '&l&6RED SANDSTONE &7(Current)'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 15'
+      - ''
+      - '&7Base Value: &a$15'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'RED_SANDSTONE-UNLOCKED-PERMS':
+    material: RED_SANDSTONE
+    slot: 3
+    priority: 2
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.RED_SANDSTONE
+    display_name: '&l&6RED SANDSTONE'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 15'
+      - ''
+      - '&7Base Value: &a$15'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'RED_SANDSTONE-UNLOCKED':
+    material: RED_SANDSTONE
+    slot: 3
+    priority: 3
+    view_requirement:
+      requirements:
+        has_size:
+          type: javascript
+          expression: '%edprison_rankup_level% >= 15'
+    display_name: '&l&6RED SANDSTONE'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 15'
+      - ''
+      - '&7Base Value: &a$15'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+    left_click_commands:
+      - '[console] pmine setblocks %player_name% RED_SANDSTONE'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.RED_SANDSTONE'
+      - '[console] lp user %player_name% permission set privatemines.blocks.RED_SANDSTONE.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.SANDSTONE.current'
+      - '[close]'
+    right_click_commands:
+      - '[console] pmine setblocks %player_name% RED_SANDSTONE'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.RED_SANDSTONE'
+      - '[console] lp user %player_name% permission set privatemines.blocks.RED_SANDSTONE.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.SANDSTONE.current'
+      - '[close]'
+  'RED_SANDSTONE-LOCKED':
+    material: RED_SANDSTONE
+    slot: 3
+    priority: 4
+    display_name: '&l&6RED SANDSTONE'
+    lore:
+      - ''
+      - '&c&lREQUIRED LEVEL: 15'
+      - ''
+      - '&7Base Value: &a$15'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  #
+  #   NETHERRACK
+  #
+  'NETHERRACK-CURRENT':
+    material: NETHERRACK
+    slot: 4
+    priority: 1
+    enchantments:
+      - DURABILITY;1
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.NETHERRACK.current
+    display_name: '&l&6NETHERRACK &7(Current)'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 18'
+      - ''
+      - '&7Base Value: &a$18'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'NETHERRACK-UNLOCKED-PERMS':
+    material: NETHERRACK
+    slot: 4
+    priority: 2
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.NETHERRACK
+    display_name: '&l&6NETHERRACK'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 18'
+      - ''
+      - '&7Base Value: &a$18'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'NETHERRACK-UNLOCKED':
+    material: NETHERRACK
+    slot: 4
+    priority: 3
+    view_requirement:
+      requirements:
+        has_size:
+          type: javascript
+          expression: '%edprison_rankup_level% >= 18'
+    display_name: '&l&6NETHERRACK'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 18'
+      - ''
+      - '&7Base Value: &a$18'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+    left_click_commands:
+      - '[console] pmine setblocks %player_name% NETHERRACK'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.NETHERRACK'
+      - '[console] lp user %player_name% permission set privatemines.blocks.NETHERRACK.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.RED_SANDSTONE.current'
+      - '[close]'
+    right_click_commands:
+      - '[console] pmine setblocks %player_name% NETHERRACK'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.NETHERRACK'
+      - '[console] lp user %player_name% permission set privatemines.blocks.NETHERRACK.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.RED_SANDSTONE.current'
+      - '[close]'
+  'NETHERRACK-LOCKED':
+    material: NETHERRACK
+    slot: 4
+    priority: 4
+    display_name: '&l&6NETHERRACK'
+    lore:
+      - ''
+      - '&c&lREQUIRED LEVEL: 18'
+      - ''
+      - '&7Base Value: &a$18'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  #
+  #   COAL_ORE
+  #
+  'COAL_ORE-CURRENT':
+    material: COAL_ORE
+    slot: 5
+    priority: 1
+    enchantments:
+      - DURABILITY;1
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.COAL_ORE.current
+    display_name: '&l&6COAL ORE &7(Current)'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 23'
+      - ''
+      - '&7Base Value: &a$23'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'COAL_ORE-UNLOCKED-PERMS':
+    material: COAL_ORE
+    slot: 5
+    priority: 2
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.COAL_ORE
+    display_name: '&l&6COAL ORE'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 23'
+      - ''
+      - '&7Base Value: &a$23'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'COAL_ORE-UNLOCKED':
+    material: COAL_ORE
+    slot: 5
+    priority: 3
+    view_requirement:
+      requirements:
+        has_size:
+          type: javascript
+          expression: '%edprison_rankup_level% >= 23'
+    display_name: '&l&6COAL ORE'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 23'
+      - ''
+      - '&7Base Value: &a$23'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+    left_click_commands:
+      - '[console] pmine setblocks %player_name% COAL_ORE'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.COAL_ORE'
+      - '[console] lp user %player_name% permission set privatemines.blocks.COAL_ORE.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.NETHERRACK.current'
+      - '[close]'
+    right_click_commands:
+      - '[console] pmine setblocks %player_name% COAL_ORE'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.COAL_ORE'
+      - '[console] lp user %player_name% permission set privatemines.blocks.COAL_ORE.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.NETHERRACK.current'
+      - '[close]'
+  'COAL_ORE-LOCKED':
+    material: COAL_ORE
+    slot: 5
+    priority: 4
+    display_name: '&l&6COAL ORE'
+    lore:
+      - ''
+      - '&c&lREQUIRED LEVEL: 23'
+      - ''
+      - '&7Base Value: &a$23'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  #
+  #   LAPIS_ORE
+  #
+  'LAPIS_ORE-CURRENT':
+    material: LAPIS_ORE
+    slot: 6
+    priority: 1
+    enchantments:
+      - DURABILITY;1
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.LAPIS_ORE.current
+    display_name: '&l&6LAPIS ORE &7(Current)'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 28'
+      - ''
+      - '&7Base Value: &a$28'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'LAPIS_ORE-UNLOCKED-PERMS':
+    material: LAPIS_ORE
+    slot: 6
+    priority: 2
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.LAPIS_ORE
+    display_name: '&l&6LAPIS ORE'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 28'
+      - ''
+      - '&7Base Value: &a$28'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'LAPIS_ORE-UNLOCKED':
+    material: LAPIS_ORE
+    slot: 6
+    priority: 3
+    view_requirement:
+      requirements:
+        has_size:
+          type: javascript
+          expression: '%edprison_rankup_level% >= 28'
+    display_name: '&l&6LAPIS ORE'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 28'
+      - ''
+      - '&7Base Value: &a$28'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+    left_click_commands:
+      - '[console] pmine setblocks %player_name% LAPIS_ORE'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.LAPIS_ORE'
+      - '[console] lp user %player_name% permission set privatemines.blocks.LAPIS_ORE.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.COAL_ORE.current'
+      - '[close]'
+    right_click_commands:
+      - '[console] pmine setblocks %player_name% LAPIS_ORE'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.LAPIS_ORE'
+      - '[console] lp user %player_name% permission set privatemines.blocks.LAPIS_ORE.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.COAL_ORE.current'
+      - '[close]'
+  'LAPIS_ORE-LOCKED':
+    material: LAPIS_ORE
+    slot: 6
+    priority: 4
+    display_name: '&l&6LAPIS ORE'
+    lore:
+      - ''
+      - '&c&lREQUIRED LEVEL: 28'
+      - ''
+      - '&7Base Value: &a$28'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  #
+  #   IRON_ORE
+  #
+  'IRON_ORE-CURRENT':
+    material: IRON_ORE
+    slot: 7
+    priority: 1
+    enchantments:
+      - DURABILITY;1
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.IRON_ORE.current
+    display_name: '&l&6IRON ORE &7(Current)'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 34'
+      - ''
+      - '&7Base Value: &a$34'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'IRON_ORE-UNLOCKED-PERMS':
+    material: IRON_ORE
+    slot: 7
+    priority: 2
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.IRON_ORE
+    display_name: '&l&6IRON ORE'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 34'
+      - ''
+      - '&7Base Value: &a$34'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'IRON_ORE-UNLOCKED':
+    material: IRON_ORE
+    slot: 7
+    priority: 3
+    view_requirement:
+      requirements:
+        has_size:
+          type: javascript
+          expression: '%edprison_rankup_level% >= 34'
+    display_name: '&l&6IRON ORE'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 34'
+      - ''
+      - '&7Base Value: &a$34'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+    left_click_commands:
+      - '[console] pmine setblocks %player_name% IRON_ORE'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.IRON_ORE'
+      - '[console] lp user %player_name% permission set privatemines.blocks.IRON_ORE.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.LAPIS_ORE.current'
+      - '[close]'
+    right_click_commands:
+      - '[console] pmine setblocks %player_name% IRON_ORE'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.IRON_ORE'
+      - '[console] lp user %player_name% permission set privatemines.blocks.IRON_ORE.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.LAPIS_ORE.current'
+      - '[close]'
+  'IRON_ORE-LOCKED':
+    material: IRON_ORE
+    slot: 7
+    priority: 4
+    display_name: '&l&6IRON ORE'
+    lore:
+      - ''
+      - '&c&lREQUIRED LEVEL: 34'
+      - ''
+      - '&7Base Value: &a$34'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  #
+  #   REDSTONE_ORE
+  #
+  'REDSTONE_ORE-CURRENT':
+    material: REDSTONE_ORE
+    slot: 8
+    priority: 1
+    enchantments:
+      - DURABILITY;1
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.REDSTONE_ORE.current
+    display_name: '&l&6REDSTONE ORE &8(Current)'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 42'
+      - ''
+      - '&7Base Value: &a$42'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'REDSTONE_ORE-UNLOCKED-PERMS':
+    material: REDSTONE_ORE
+    slot: 8
+    priority: 2
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.REDSTONE_ORE
+    display_name: '&l&6REDSTONE ORE'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 42'
+      - ''
+      - '&7Base Value: &a$42'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'REDSTONE_ORE-UNLOCKED':
+    material: REDSTONE_ORE
+    slot: 8
+    priority: 3
+    view_requirement:
+      requirements:
+        has_size:
+          type: javascript
+          expression: '%edprison_rankup_level% >= 42'
+    display_name: '&l&6REDSTONE ORE'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 42'
+      - ''
+      - '&7Base Value: &a$42'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+    left_click_commands:
+      - '[console] pmine setblocks %player_name% REDSTONE_ORE'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.REDSTONE_ORE'
+      - '[console] lp user %player_name% permission set privatemines.blocks.REDSTONE_ORE.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.IRON_ORE.current'
+      - '[close]'
+    right_click_commands:
+      - '[console] pmine setblocks %player_name% REDSTONE_ORE'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.REDSTONE_ORE'
+      - '[console] lp user %player_name% permission set privatemines.blocks.REDSTONE_ORE.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.IRON_ORE.current'
+      - '[close]'
+  'REDSTONE_ORE-LOCKED':
+    material: REDSTONE_ORE
+    slot: 8
+    priority: 4
+    display_name: '&l&6REDSTONE ORE'
+    lore:
+      - ''
+      - '&c&lREQUIRED LEVEL: 42'
+      - ''
+      - '&7Base Value: &a$42'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  #
+  #   NETHER_QUARTZ_ORE
+  #
+  'NETHER_QUARTZ_ORE-CURRENT':
+    material: NETHER_QUARTZ_ORE
+    slot: 9
+    priority: 1
+    enchantments:
+      - DURABILITY;1
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.NETHER_QUARTZ_ORE.current
+    display_name: '&l&6NETHER QUARTZ ORE &8(Current)'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 49'
+      - ''
+      - '&7Base Value: &a$49'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'NETHER_QUARTZ_ORE-UNLOCKED-PERMS':
+    material: NETHER_QUARTZ_ORE
+    slot: 9
+    priority: 2
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.NETHER_QUARTZ_ORE
+    display_name: '&l&6NETHER QUARTZ ORE'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 49'
+      - ''
+      - '&7Base Value: &a$49'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'NETHER_QUARTZ_ORE-UNLOCKED':
+    material: NETHER_QUARTZ_ORE
+    slot: 9
+    priority: 3
+    view_requirement:
+      requirements:
+        has_size:
+          type: javascript
+          expression: '%edprison_rankup_level% >= 49'
+    display_name: '&l&6NETHER QUARTZ ORE'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 49'
+      - ''
+      - '&7Base Value: &a$49'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+    left_click_commands:
+      - '[console] pmine setblocks %player_name% NETHER_QUARTZ_ORE'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.NETHER_QUARTZ_ORE'
+      - '[console] lp user %player_name% permission set privatemines.blocks.NETHER_QUARTZ_ORE.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.REDSTONE_ORE.current'
+      - '[close]'
+    right_click_commands:
+      - '[console] pmine setblocks %player_name% NETHER_QUARTZ_ORE'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.NETHER_QUARTZ_ORE'
+      - '[console] lp user %player_name% permission set privatemines.blocks.NETHER_QUARTZ_ORE.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.REDSTONE_ORE.current'
+      - '[close]'
+  'NETHER_QUARTZ_ORE-LOCKED':
+    material: NETHER_QUARTZ_ORE
+    slot: 9
+    priority: 4
+    display_name: '&l&6NETHER QUARTZ ORE'
+    lore:
+      - ''
+      - '&c&lREQUIRED LEVEL: 49'
+      - ''
+      - '&7Base Value: &a$49'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  #
+  #   GOLD_ORE
+  #
+  'GOLD_ORE-CURRENT':
+    material: GOLD_ORE
+    slot: 10
+    priority: 1
+    enchantments:
+      - DURABILITY;1
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.GOLD_ORE.current
+    display_name: '&l&6GOLD ORE &8(Current)'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 56'
+      - ''
+      - '&7Base Value: &a$56'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'GOLD_ORE-UNLOCKED-PERMS':
+    material: GOLD_ORE
+    slot: 10
+    priority: 2
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.GOLD_ORE
+    display_name: '&l&6GOLD ORE'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 56'
+      - ''
+      - '&7Base Value: &a$56'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'GOLD_ORE-UNLOCKED':
+    material: GOLD_ORE
+    slot: 10
+    priority: 3
+    view_requirement:
+      requirements:
+        has_size:
+          type: javascript
+          expression: '%edprison_rankup_level% >= 56'
+    display_name: '&l&6GOLD ORE'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 56'
+      - ''
+      - '&7Base Value: &a$56'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+    left_click_commands:
+      - '[console] pmine setblocks %player_name% GOLD_ORE'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.GOLD_ORE'
+      - '[console] lp user %player_name% permission set privatemines.blocks.GOLD_ORE.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.NETHER_QUARTZ_ORE.current'
+      - '[close]'
+    right_click_commands:
+      - '[console] pmine setblocks %player_name% GOLD_ORE'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.GOLD_ORE'
+      - '[console] lp user %player_name% permission set privatemines.blocks.GOLD_ORE.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.NETHER_QUARTZ_ORE.current'
+      - '[close]'
+  'GOLD_ORE-LOCKED':
+    material: GOLD_ORE
+    slot: 10
+    priority: 4
+    display_name: '&l&6GOLD ORE'
+    lore:
+      - ''
+      - '&c&lREQUIRED LEVEL: 56'
+      - ''
+      - '&7Base Value: &a$56'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  #
+  #   DIAMOND_ORE
+  #
+  'DIAMOND_ORE-CURRENT':
+    material: DIAMOND_ORE
+    slot: 11
+    priority: 1
+    enchantments:
+      - DURABILITY;1
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.DIAMOND_ORE.current
+    display_name: '&l&6DIAMOND ORE &8(Current)'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 64'
+      - ''
+      - '&7Base Value: &a$64'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'DIAMOND_ORE-UNLOCKED-PERMS':
+    material: DIAMOND_ORE
+    slot: 11
+    priority: 2
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.DIAMOND_ORE
+    display_name: '&l&6DIAMOND ORE'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 64'
+      - ''
+      - '&7Base Value: &a$64'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'DIAMOND_ORE-UNLOCKED':
+    material: DIAMOND_ORE
+    slot: 11
+    priority: 3
+    view_requirement:
+      requirements:
+        has_size:
+          type: javascript
+          expression: '%edprison_rankup_level% >= 64'
+    display_name: '&l&6DIAMOND ORE'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 64'
+      - ''
+      - '&7Base Value: &a$64'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+    left_click_commands:
+      - '[console] pmine setblocks %player_name% DIAMOND_ORE'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.DIAMOND_ORE'
+      - '[console] lp user %player_name% permission set privatemines.blocks.DIAMOND_ORE.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.GOLD_ORE.current'
+      - '[close]'
+    right_click_commands:
+      - '[console] pmine setblocks %player_name% DIAMOND_ORE'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.DIAMOND_ORE'
+      - '[console] lp user %player_name% permission set privatemines.blocks.DIAMOND_ORE.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.GOLD_ORE.current'
+      - '[close]'
+  'DIAMOND_ORE-LOCKED':
+    material: DIAMOND_ORE
+    slot: 11
+    priority: 4
+    display_name: '&l&6DIAMOND ORE'
+    lore:
+      - ''
+      - '&c&lREQUIRED LEVEL: 64'
+      - ''
+      - '&7Base Value: &a$64'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  #
+  #   EMERALD_ORE
+  #
+  'EMERALD_ORE-CURRENT':
+    material: EMERALD_ORE
+    slot: 12
+    priority: 1
+    enchantments:
+      - DURABILITY;1
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.EMERALD_ORE.current
+    display_name: '&l&6EMERALD ORE &8(Current)'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 78'
+      - ''
+      - '&7Base Value: &a$78'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'EMERALD_ORE-UNLOCKED-PERMS':
+    material: EMERALD_ORE
+    slot: 12
+    priority: 2
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.EMERALD_ORE
+    display_name: '&l&6EMERALD ORE'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 78'
+      - ''
+      - '&7Base Value: &a$78'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'EMERALD_ORE-UNLOCKED':
+    material: EMERALD_ORE
+    slot: 12
+    priority: 3
+    view_requirement:
+      requirements:
+        has_size:
+          type: javascript
+          expression: '%edprison_rankup_level% >= 78'
+    display_name: '&l&6EMERALD ORE'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 78'
+      - ''
+      - '&7Base Value: &a$78'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+    left_click_commands:
+      - '[console] pmine setblocks %player_name% EMERALD_ORE'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.EMERALD_ORE'
+      - '[console] lp user %player_name% permission set privatemines.blocks.EMERALD_ORE.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.DIAMOND_ORE.current'
+      - '[close]'
+    right_click_commands:
+      - '[console] pmine setblocks %player_name% EMERALD_ORE'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.EMERALD_ORE'
+      - '[console] lp user %player_name% permission set privatemines.blocks.EMERALD_ORE.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.DIAMOND_ORE.current'
+      - '[close]'
+  'EMERALD_ORE-LOCKED':
+    material: EMERALD_ORE
+    slot: 12
+    priority: 4
+    display_name: '&l&6EMERALD ORE'
+    lore:
+      - ''
+      - '&c&lREQUIRED LEVEL: 78'
+      - ''
+      - '&7Base Value: &a$78'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  #
+  #   COAL_BLOCK
+  #
+  'COAL_BLOCK-CURRENT':
+    material: COAL_BLOCK
+    slot: 13
+    priority: 1
+    enchantments:
+      - DURABILITY;1
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.COAL_BLOCK.current
+    display_name: '&l&6COAL BLOCK &8(Current)'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 84'
+      - ''
+      - '&7Base Value: &a$84'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'COAL_BLOCK-UNLOCKED-PERMS':
+    material: COAL_BLOCK
+    slot: 13
+    priority: 2
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.COAL_BLOCK
+    display_name: '&l&6COAL BLOCK'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 84'
+      - ''
+      - '&7Base Value: &a$84'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'COAL_BLOCK-UNLOCKED':
+    material: COAL_BLOCK
+    slot: 13
+    priority: 3
+    view_requirement:
+      requirements:
+        has_size:
+          type: javascript
+          expression: '%edprison_rankup_level% >= 84'
+    display_name: '&l&6COAL BLOCK'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 84'
+      - ''
+      - '&7Base Value: &a$84'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+    left_click_commands:
+      - '[console] pmine setblocks %player_name% COAL_BLOCK'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.COAL_BLOCK'
+      - '[console] lp user %player_name% permission set privatemines.blocks.COAL_BLOCK.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.EMERALD_ORE.current'
+      - '[close]'
+    right_click_commands:
+      - '[console] pmine setblocks %player_name% COAL_BLOCK'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.COAL_BLOCK'
+      - '[console] lp user %player_name% permission set privatemines.blocks.COAL_BLOCK.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.EMERALD_ORE.current'
+      - '[close]'
+  'COAL_BLOCK-LOCKED':
+    material: COAL_BLOCK
+    slot: 13
+    priority: 4
+    display_name: '&l&6COAL BLOCK'
+    lore:
+      - ''
+      - '&c&lREQUIRED LEVEL: 84'
+      - ''
+      - '&7Base Value: &a$84'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  #
+  #   LAPIS_BLOCK
+  #
+  'LAPIS_BLOCK-CURRENT':
+    material: LAPIS_BLOCK
+    slot: 14
+    priority: 1
+    enchantments:
+      - DURABILITY;1
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.LAPIS_BLOCK.current
+    display_name: '&l&6LAPIS BLOCK &8(Current)'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 96'
+      - ''
+      - '&7Base Value: &a$96'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'LAPIS_BLOCK-UNLOCKED-PERMS':
+    material: LAPIS_BLOCK
+    slot: 14
+    priority: 2
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.LAPIS_BLOCK
+    display_name: '&l&6LAPIS BLOCK'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 96'
+      - ''
+      - '&7Base Value: &a$96'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'LAPIS_BLOCK-UNLOCKED':
+    material: LAPIS_BLOCK
+    slot: 14
+    priority: 3
+    view_requirement:
+      requirements:
+        has_size:
+          type: javascript
+          expression: '%edprison_rankup_level% >= 96'
+    display_name: '&l&6LAPIS BLOCK'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 96'
+      - ''
+      - '&7Base Value: &a$96'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+    left_click_commands:
+      - '[console] pmine setblocks %player_name% LAPIS_BLOCK'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.LAPIS_BLOCK'
+      - '[console] lp user %player_name% permission set privatemines.blocks.LAPIS_BLOCK.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.COAL_BLOCK.current'
+      - '[close]'
+    right_click_commands:
+      - '[console] pmine setblocks %player_name% LAPIS_BLOCK'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.LAPIS_BLOCK'
+      - '[console] lp user %player_name% permission set privatemines.blocks.LAPIS_BLOCK.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.COAL_BLOCK.current'
+      - '[close]'
+  'LAPIS_BLOCK-LOCKED':
+    material: LAPIS_BLOCK
+    slot: 14
+    priority: 4
+    display_name: '&l&6LAPIS BLOCK'
+    lore:
+      - ''
+      - '&c&lREQUIRED LEVEL: 96'
+      - ''
+      - '&7Base Value: &a$96'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  #
+  #   IRON_BLOCK
+  #
+  'IRON_BLOCK-CURRENT':
+    material: IRON_BLOCK
+    slot: 15
+    priority: 1
+    enchantments:
+      - DURABILITY;1
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.IRON_BLOCK.current
+    display_name: '&l&6IRON BLOCK &8(Current)'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 106'
+      - ''
+      - '&7Base Value: &a$106'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'IRON_BLOCK-UNLOCKED-PERMS':
+    material: IRON_BLOCK
+    slot: 15
+    priority: 2
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.IRON_BLOCK
+    display_name: '&l&6IRON BLOCK'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 106'
+      - ''
+      - '&7Base Value: &a$106'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'IRON_BLOCK-UNLOCKED':
+    material: IRON_BLOCK
+    slot: 15
+    priority: 3
+    view_requirement:
+      requirements:
+        has_size:
+          type: javascript
+          expression: '%edprison_rankup_level% >= 106'
+    display_name: '&l&6IRON BLOCK'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 106'
+      - ''
+      - '&7Base Value: &a$106'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+    left_click_commands:
+      - '[console] pmine setblocks %player_name% IRON_BLOCK'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.IRON_BLOCK'
+      - '[console] lp user %player_name% permission set privatemines.blocks.IRON_BLOCK.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.LAPIS_BLOCK.current'
+      - '[close]'
+    right_click_commands:
+      - '[console] pmine setblocks %player_name% IRON_BLOCK'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.IRON_BLOCK'
+      - '[console] lp user %player_name% permission set privatemines.blocks.IRON_BLOCK.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.LAPIS_BLOCK.current'
+      - '[close]'
+  'IRON_BLOCK-LOCKED':
+    material: IRON_BLOCK
+    slot: 15
+    priority: 4
+    display_name: '&l&6IRON BLOCK'
+    lore:
+      - ''
+      - '&c&lREQUIRED LEVEL: 106'
+      - ''
+      - '&7Base Value: &a$106'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  #
+  #   REDSTONE_BLOCK
+  #
+  'REDSTONE_BLOCK-CURRENT':
+    material: REDSTONE_BLOCK
+    slot: 16
+    priority: 1
+    enchantments:
+      - DURABILITY;1
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.REDSTONE_BLOCK.current
+    display_name: '&l&6REDSTONE BLOCK &8(Current)'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 127'
+      - ''
+      - '&7Base Value: &a$127'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'REDSTONE_BLOCK-UNLOCKED-PERMS':
+    material: REDSTONE_BLOCK
+    slot: 16
+    priority: 2
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.REDSTONE_BLOCK
+    display_name: '&l&6REDSTONE BLOCK'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 127'
+      - ''
+      - '&7Base Value: &a$127'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'REDSTONE_BLOCK-UNLOCKED':
+    material: REDSTONE_BLOCK
+    slot: 16
+    priority: 3
+    view_requirement:
+      requirements:
+        has_size:
+          type: javascript
+          expression: '%edprison_rankup_level% >= 127'
+    display_name: '&l&6REDSTONE BLOCK'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 127'
+      - ''
+      - '&7Base Value: &a$127'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+    left_click_commands:
+      - '[console] pmine setblocks %player_name% REDSTONE_BLOCK'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.REDSTONE_BLOCK'
+      - '[console] lp user %player_name% permission set privatemines.blocks.REDSTONE_BLOCK.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.IRON_BLOCK.current'
+      - '[close]'
+    right_click_commands:
+      - '[console] pmine setblocks %player_name% REDSTONE_BLOCK'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.REDSTONE_BLOCK'
+      - '[console] lp user %player_name% permission set privatemines.blocks.REDSTONE_BLOCK.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.IRON_BLOCK.current'
+      - '[close]'
+  'REDSTONE_BLOCK-LOCKED':
+    material: REDSTONE_BLOCK
+    slot: 16
+    priority: 4
+    display_name: '&l&6REDSTONE BLOCK'
+    lore:
+      - ''
+      - '&c&lREQUIRED LEVEL: 127'
+      - ''
+      - '&7Base Value: &a$127'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  #
+  #   QUARTZ_BLOCK
+  #
+  'QUARTZ_BLOCK-CURRENT':
+    material: QUARTZ_BLOCK
+    slot: 17
+    priority: 1
+    enchantments:
+      - DURABILITY;1
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.QUARTZ_BLOCK.current
+    display_name: '&l&6QUARTZ BLOCK &8(Current)'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 136'
+      - ''
+      - '&7Base Value: &a$136'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'QUARTZ_BLOCK-UNLOCKED-PERMS':
+    material: QUARTZ_BLOCK
+    slot: 17
+    priority: 2
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.QUARTZ_BLOCK
+    display_name: '&l&6QUARTZ BLOCK'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 136'
+      - ''
+      - '&7Base Value: &a$136'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'QUARTZ_BLOCK-UNLOCKED':
+    material: QUARTZ_BLOCK
+    slot: 17
+    priority: 3
+    view_requirement:
+      requirements:
+        has_size:
+          type: javascript
+          expression: '%edprison_rankup_level% >= 136'
+    display_name: '&l&6QUARTZ BLOCK'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 136'
+      - ''
+      - '&7Base Value: &a$136'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+    left_click_commands:
+      - '[console] pmine setblocks %player_name% QUARTZ_BLOCK'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.QUARTZ_BLOCK'
+      - '[console] lp user %player_name% permission set privatemines.blocks.QUARTZ_BLOCK.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.REDSTONE_BLOCK.current'
+      - '[close]'
+    right_click_commands:
+      - '[console] pmine setblocks %player_name% QUARTZ_BLOCK'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.QUARTZ_BLOCK'
+      - '[console] lp user %player_name% permission set privatemines.blocks.QUARTZ_BLOCK.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.REDSTONE_BLOCK.current'
+      - '[close]'
+  'QUARTZ_BLOCK-LOCKED':
+    material: QUARTZ_BLOCK
+    slot: 17
+    priority: 4
+    display_name: '&l&6QUARTZ BLOCK'
+    lore:
+      - ''
+      - '&c&lREQUIRED LEVEL: 136'
+      - ''
+      - '&7Base Value: &a$136'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  #
+  #   GOLD_BLOCK
+  #
+  'GOLD_BLOCK-CURRENT':
+    material: GOLD_BLOCK
+    slot: 18
+    priority: 1
+    enchantments:
+      - DURABILITY;1
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.GOLD_BLOCK.current
+    display_name: '&l&6GOLD BLOCK &8(Current)'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 148'
+      - ''
+      - '&7Base Value: &a$148'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'GOLD_BLOCK-UNLOCKED-PERMS':
+    material: GOLD_BLOCK
+    slot: 18
+    priority: 2
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.GOLD_BLOCK
+    display_name: '&l&6GOLD BLOCK'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 148'
+      - ''
+      - '&7Base Value: &a$148'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'GOLD_BLOCK-UNLOCKED':
+    material: GOLD_BLOCK
+    slot: 18
+    priority: 3
+    view_requirement:
+      requirements:
+        has_size:
+          type: javascript
+          expression: '%edprison_rankup_level% >= 148'
+    display_name: '&l&6GOLD BLOCK'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 148'
+      - ''
+      - '&7Base Value: &a$148'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+    left_click_commands:
+      - '[console] pmine setblocks %player_name% GOLD_BLOCK'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.GOLD_BLOCK'
+      - '[console] lp user %player_name% permission set privatemines.blocks.GOLD_BLOCK.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.QUARTZ_BLOCK.current'
+      - '[close]'
+    right_click_commands:
+      - '[console] pmine setblocks %player_name% GOLD_BLOCK'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.GOLD_BLOCK'
+      - '[console] lp user %player_name% permission set privatemines.blocks.GOLD_BLOCK.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.QUARTZ_BLOCK.current'
+      - '[close]'
+  'GOLD_BLOCK-LOCKED':
+    material: GOLD_BLOCK
+    slot: 18
+    priority: 4
+    display_name: '&l&6GOLD BLOCK'
+    lore:
+      - ''
+      - '&c&lREQUIRED LEVEL: 148'
+      - ''
+      - '&7Base Value: &a$148'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  #
+  #   DIAMOND_BLOCK
+  #
+  'DIAMOND_BLOCK-CURRENT':
+    material: DIAMOND_BLOCK
+    slot: 19
+    priority: 1
+    enchantments:
+      - DURABILITY;1
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.DIAMOND_BLOCK.current
+    display_name: '&l&6DIAMOND BLOCK &8(Current)'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 156'
+      - ''
+      - '&7Base Value: &a$156'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'DIAMOND_BLOCK-UNLOCKED-PERMS':
+    material: DIAMOND_BLOCK
+    slot: 19
+    priority: 2
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.DIAMOND_BLOCK
+    display_name: '&l&6DIAMOND BLOCK'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 156'
+      - ''
+      - '&7Base Value: &a$156'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'DIAMOND_BLOCK-UNLOCKED':
+    material: DIAMOND_BLOCK
+    slot: 19
+    priority: 3
+    view_requirement:
+      requirements:
+        has_size:
+          type: javascript
+          expression: '%edprison_rankup_level% >= 156'
+    display_name: '&l&6DIAMOND BLOCK'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 156'
+      - ''
+      - '&7Base Value: &a$156'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+    left_click_commands:
+      - '[console] pmine setblocks %player_name% DIAMOND_BLOCK'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.DIAMOND_BLOCK'
+      - '[console] lp user %player_name% permission set privatemines.blocks.DIAMOND_BLOCK.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.GOLD_BLOCK.current'
+      - '[close]'
+    right_click_commands:
+      - '[console] pmine setblocks %player_name% DIAMOND_BLOCK'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.DIAMOND_BLOCK'
+      - '[console] lp user %player_name% permission set privatemines.blocks.DIAMOND_BLOCK.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.GOLD_BLOCK.current'
+      - '[close]'
+  'DIAMOND_BLOCK-LOCKED':
+    material: DIAMOND_BLOCK
+    slot: 19
+    priority: 4
+    display_name: '&l&6DIAMOND BLOCK'
+    lore:
+      - ''
+      - '&c&lREQUIRED LEVEL: 156'
+      - ''
+      - '&7Base Value: &a$156'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  #
+  #   EMERALD_BLOCK
+  #
+  'EMERALD_BLOCK-CURRENT':
+    material: EMERALD_BLOCK
+    slot: 20
+    priority: 1
+    enchantments:
+      - DURABILITY;1
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.EMERALD_BLOCK.current
+    display_name: '&l&6EMERALD BLOCK &8(Current)'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 228'
+      - ''
+      - '&7Base Value: &a$228'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'EMERALD_BLOCK-UNLOCKED-PERMS':
+    material: EMERALD_BLOCK
+    slot: 20
+    priority: 2
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.EMERALD_BLOCK
+    display_name: '&l&6EMERALD BLOCK'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 228'
+      - ''
+      - '&7Base Value: &a$228'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'EMERALD_BLOCK-UNLOCKED':
+    material: EMERALD_BLOCK
+    slot: 20
+    priority: 3
+    view_requirement:
+      requirements:
+        has_size:
+          type: javascript
+          expression: '%edprison_rankup_level% >= 228'
+    display_name: '&l&6EMERALD BLOCK'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 228'
+      - ''
+      - '&7Base Value: &a$228'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+    left_click_commands:
+      - '[console] pmine setblocks %player_name% EMERALD_BLOCK'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.EMERALD_BLOCK'
+      - '[console] lp user %player_name% permission set privatemines.blocks.EMERALD_BLOCK.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.DIAMOND_BLOCK.current'
+      - '[close]'
+    right_click_commands:
+      - '[console] pmine setblocks %player_name% EMERALD_BLOCK'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.EMERALD_BLOCK'
+      - '[console] lp user %player_name% permission set privatemines.blocks.EMERALD_BLOCK.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.DIAMOND_BLOCK.current'
+      - '[close]'
+  'EMERALD_BLOCK-LOCKED':
+    material: EMERALD_BLOCK
+    slot: 20
+    priority: 4
+    display_name: '&l&6EMERALD BLOCK'
+    lore:
+      - ''
+      - '&c&lREQUIRED LEVEL: 228'
+      - ''
+      - '&7Base Value: &a$228'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  #
+  #   END_STONE
+  #
+  'END_STONE-CURRENT':
+    material: END_STONE
+    slot: 21
+    priority: 1
+    enchantments:
+      - DURABILITY;1
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.END_STONE.current
+    display_name: '&l&6END STONE &8(Current)'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 300'
+      - ''
+      - '&7Base Value: &a$300'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'END_STONE-UNLOCKED-PERMS':
+    material: END_STONE
+    slot: 21
+    priority: 2
+    view_requirement:
+      requirements:
+        has_perms:
+          type: has permission
+          permission: privatemines.blocks.END_STONE
+    display_name: '&l&6END STONE'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 300'
+      - ''
+      - '&7Base Value: &a$300'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+  'END_STONE-UNLOCKED':
+    material: END_STONE
+    slot: 21
+    priority: 3
+    view_requirement:
+      requirements:
+        has_size:
+          type: javascript
+          expression: '%edprison_rankup_level% >= 300'
+    display_name: '&l&6END STONE'
+    lore:
+      - ''
+      - '&a&lUNLOCKED AT LEVEL: 300'
+      - ''
+      - '&7Base Value: &a$300'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''
+    left_click_commands:
+      - '[console] pmine setblocks %player_name% END_STONE'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.END_STONE'
+      - '[console] lp user %player_name% permission set privatemines.blocks.END_STONE.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.EMERALD_BLOCK.current'
+      - '[close]'
+    right_click_commands:
+      - '[console] pmine setblocks %player_name% END_STONE'
+      - '[console] tm msg %player_name% &e&lBlock Upgrade\n&fSuccessfully purchased!'
+      - '[console] lp user %player_name% permission set privatemines.blocks.END_STONE'
+      - '[console] lp user %player_name% permission set privatemines.blocks.END_STONE.current'
+      - '[console] lp user %player_name% permission unset privatemines.blocks.EMERALD_BLOCK.current'
+      - '[close]'
+  'END_STONE-LOCKED':
+    material: END_STONE
+    slot: 21
+    priority: 4
+    display_name: '&l&6END STONE'
+    lore:
+      - ''
+      - '&c&lREQUIRED LEVEL: 300'
+      - ''
+      - '&7Base Value: &a$300'
+      - ''
+      - '&c&lCurrent Level: &f%edprison_rankup_level_formatted%'
+      - ''

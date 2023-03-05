@@ -1,0 +1,50 @@
+menu_title: '&8Mine Settings'
+open_command:
+  - minesettings
+size: 27
+items:
+  'Fill':
+    material: BLACK_STAINED_GLASS_PANE
+    data: 14
+    slots:
+      - 0-8
+      - 9
+      - 10
+      - 11
+      - 12
+      - 13
+      - 14
+      - 15
+      - 16
+      - 17
+      - 18-26
+  'Close':
+    material: RED_TERRACOTTA
+    slot: 14
+    display_name: '&c&lClose your mine'
+    lore:
+      - '&7Clicking here you can close'
+      - '&7your mine to other players.'
+      - ''
+      - "&7&o(( &f&oClick here &7&oto close your mine ))"
+    left_click_commands:
+      - '[player] pmine close'
+      - '[close]'
+    right_click_commands:
+      - '[player] pmine close'
+      - '[close]'
+  'Open':
+    material: GREEN_TERRACOTTA
+    slot: 12
+    display_name: '&a&lOpen your mine'
+    lore:
+      - '&7Clicking here you can open'
+      - '&7your mine to other players.'
+      - ''
+      - "&7&o(( &f&oClick here &7&oto open your mine ))"
+    left_click_commands:
+      - '[player] pmine open'
+      - '[close]'
+    right_click_commands:
+      - '[player] pmine open'
+      - '[close]'

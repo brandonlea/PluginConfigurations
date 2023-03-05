@@ -1,0 +1,67 @@
+menu_title: '&1&lYour Mine'
+open_command:
+  - mine
+  - mines
+open_commands:
+  - '[sound] ENTITY_BAT_TAKEOFF 1 1'
+size: 54
+items:
+  'Fill':
+    material: BLACK_STAINED_GLASS_PANE
+    data: 14
+    slots:
+      - 0-53
+    display_name: ' '
+  'Teleport':
+    material: 'ENDER_PEARL'
+    slot: 31
+    display_name: '&e&l&lTeleport'
+    lore:
+      - '&7&o(( Clicking here you can'
+      - '&7&oteleport to your mine ))'
+      - ''
+      - '&6* &eClick here to go'
+    left_click_commands:
+      - '[player] privatemine teleport'
+      - '[console] tm msg %player_name% &e&lTELEPORTED\n&fYou have been teleported'
+      - '[console] pm teleport %player_name%'
+      - '[sound] ENTITY_ENDERMAN_TELEPORT'
+    right_click_commands:
+      - '[player] privatemine teleport'
+      - '[console] tm msg %player_name% &e&lTELEPORTED\n&fYou have been teleported'
+      - '[console] pm teleport %player_name%'
+      - '[sound] ENTITY_ENDERMAN_TELEPORT'
+  'Reset':
+    material: CHEST_MINECART
+    slot: 29
+    display_name: '&e&lReset'
+    lore:
+      - '&7&o(( Clicking here you can'
+      - '&7&orefill your mine ))'
+      - ''
+      - '&6* &eClick here to reset'
+    left_click_commands:
+      - '[player] privatemine reset'
+      - '[console] tm msg %player_name% &e&lSUCCESSFUL\n&fYour mine has been reset'
+      - '[close]'
+      - '[sound] ENTITY_PLAYER_LEVELUP'
+    right_click_commands:
+      - '[player] privatemine reset'
+      - '[console] tm msg %player_name% &e&lSUCCESSFUL\n&fYour mine has been reset'
+      - '[close]'
+      - '[sound] ENTITY_PLAYER_LEVELUP'
+  'OpenCloseMineSelection':
+    material: BARRIER
+    slot: 33
+    display_name: '&e&lPrivateMine Settings'
+    lore:
+      - '&7&o(( Clicking here you can open'
+      - '&7the Privatemine Settings! ))'
+      - ''
+      - '&6* &eClick here to open'
+    left_click_commands:
+      - '[openguimenu] Settings2'
+      - '[sound] ENTITY_ENDERMAN_TELEPORT 1 -1'
+    right_click_commands:
+      - '[openguimenu] Settings2'
+      - '[sound] ENTITY_ENDERMAN_TELEPORT 1 -1'
